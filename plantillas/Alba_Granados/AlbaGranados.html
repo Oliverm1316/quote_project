@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+	<style>
+		:root {
+  /* Set fade in duration */
+  --fade-time: 0.5s;
+}
+
+body {
+  margin: 0px;
+  padding: 0;
+  font-size: 14px;
+  font-family: "Helvetica Neue", Helvetica,Arial,sans-serif;
+  font-weight: 360;
+  line-height: 130%;
+  
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  border: #fff solid 1px;
+ 
+}
+
+.main-img img,
+.imgs img {
+  width: 100%;
+}
+
+.imgs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 5px;
+}
+
+.imgs img {
+  cursor: pointer;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn var(--fade-time) ease-in 1 forwards;
+}
+
+/* Media Queries */
+@media(max-width: 600px) {
+  .imgs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+</style>
+</head>
+
+
+<body>
+  <div class="activities" style="margin: auto; padding: 0px;">   
+    
+                                                <!--insertar titulo-->
+    <p> Alba Granados reopens its doors in 2016 with a completely renewed look. The spacious restaurant is divided into two floors: it has an elegant dining room on the ground floor and a fantastic New York style cocktail bar on the first floor, plus an exquisite balcony. Its cuisine is traditional based with current touches and shares prominence with its extensive wine cellar.<p>
+
+    <p>The gastronomic offer of Alba Granados is based on a traditional high quality cuisine with signature touches. Its chef, Carlota Claver, from the Hofmann school, masterfully adapts the recipes with a fresh and contemporary twist. In the menu we will find a wide variety of dishes: tapas to share, cold and hot starters, cheeses and Iberian cold cuts, oysters, fresh fish and excellent meat.</p>  
+
+  
+
+                     <!--insertar el texto-->
+    <hr>
+  </div>
+	<div class="container">
+    <div class="main-img">
+      <img src="alba1.jpg" id="current">
+    </div>
+
+    <div class="imgs">                                          <!--insertar las fotos-->
+      <img src="alba1.jpg">
+      <img src="alba2.jpg">
+      <img src="alba3.jpg">
+      <img src="alba4.jpg">
+    </div>
+  </div>
+  <hr>
+  
+  <section class="container">
+
+<div class ="one" style="float: left;
+    padding: 10px; background-color: rgba(238, 238, 238, 0.6)">
+<p><i class="fa fa-map-o" style="font-size:20px;color:orange;"></i>   <!--insertar la info relevante a los iconos-->
+<span style="margin: 0 15px; font-size:14px"><b>Location:</b> City Centre</p></span>
+<p><i class="fa fa-cutlery" style="font-size:20px;color:orange;"></i> 
+<span style="margin: 0 20px; font-size:14px"><b>Dining room capacities:</b> 70,50 and 15 pax</p></span>
+<p><i class="fa fa-eur" style="font-size:20px;color:orange;"></i> 
+<span style="margin: 0 23px; font-size:14px"><b>Price Level:</b> medium - high</p></span>
+</div>
+
+<div class ="two" style="float: right;
+    padding: 10px; background-color: rgba(238, 238, 238, 0.6); ">
+
+<p><i class="fa fa-handshake-o" style="font-size:20px;color:orange;"></i> 
+<span style="margin: 0 3px; font-size:14px"><b>Style:</b> Seasonal Mediterranean cuisine</p></span>
+<p><i class="fa fa-apple" style="font-size:20px;color:orange;"></i> 
+<span style="margin: 0 10px"><b>Vegetarian Options/Special diets:</b> Available</p></span>
+<p><i class="fa fa-wheelchair" style="font-size:22px;color:orange;"></i>   
+<span style="margin: 0 90px, font-size:14px"><b>Handicapped facilities:</b> Yes</p></span>
+</div>
+</section>
+</div> 
+	<script>
+		const current = document.querySelector('#current');
+const imgs = document.querySelector('.imgs');
+const img = document.querySelectorAll('.imgs img');
+const opacity = 0.6;
+
+// Set first img opacity
+img[0].style.opacity = opacity;
+
+imgs.addEventListener('click', imgClick);
+
+function imgClick(e) {
+  // Reset the opacity
+  img.forEach(img => (img.style.opacity = 1));
+
+  // Change current image to src of clicked image
+  current.src = e.target.src;
+
+  // Add fade in class
+  current.classList.add('fade-in');
+
+  // Remove fade-in class after .5 seconds
+  setTimeout(() => current.classList.remove('fade-in'), 500);
+
+  // Change the opacity to opacity var
+  e.target.style.opacity = opacity;
+}
+
+	</script>
+</body>
+</html>

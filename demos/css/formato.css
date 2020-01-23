@@ -1,0 +1,101 @@
+
+body {
+      font-size: 21px;
+      color: #22281B;
+      line-height: 130%;
+      font-weight: 400;
+      font-family: 'Barlow Condensed', sans-serif;
+      padding-top: 200px;
+  }
+  
+td { 
+  font-size: 18px;
+}
+
+h1 {
+  font-size: 40px;
+  color: #EA5933;
+  font-weight: bold;
+  font-family: 'Barlow Condensed';
+}
+
+h2 { 
+    font-size: 28px;
+    color: #22281B;
+    font-weight: bold;
+}
+
+h3 { 
+  font-size: 21px;
+  color: #22281B;
+  font-weight: 400;
+  font-family: 'Barlow Condensed';
+}
+
+
+h4 { 
+  font-size: 21px;
+  color: #22281B;
+  font-family: 'Barlow Condensed';
+}
+
+
+h5 { 
+  font-size: 21px;
+  color: #EA5933;
+  font-family: 'Barlow Condensed';
+
+}
+
+a:link{
+  color: white;
+}
+
+.nav-item a.nav-link{
+  background-color: rgba(234,89,51);
+  padding-left: 10px;
+  margin-left: 10px;
+}
+.nav-item a.nav-link.active{
+  background-color: rgba(234,89,51);
+}
+.nav-item a.nav-link:hover{
+  background-color: rgba(234,89,51,.5);
+}
+
+div.images {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 767px) {
+#toc {
+    position: relative;
+    width: 100%;
+    margin: 0px 0px 20px 0px;
+}
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa-facebook {
+  background: rgba();
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}

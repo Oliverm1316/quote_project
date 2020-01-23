@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+  <link href='https://fonts.googleapis.com/css?family=Barlow Condensed' rel='stylesheet'>
+  <link rel="stylesheet" href="../fichas_style.css"></link>
+</head>
+
+<body>
+  <div class="activities" style="margin: auto; padding: 0px;">   
+                                            
+    <p> Casa Carmen arrives at Barcelona's city center in 2017 with a very attractive proposal: a Mediterranean menu with both traditional and innovative dishes at affordable prices. In addition, it also has an interesting selection of tapas and dishes perfect to share. The restaurant, very cozy, is divided into two floors.<p>
+
+    <p>Casa Carmen is a young, dynamic and continuously growing restaurant group that already has establishments in Madrid, Seville and Barcelona. After the success of the restaurants located in Gran Via 2 and Diagonal Mar shopping centers, Casa Carmen arrives in 2017 at the emblematic Passeig de Gràcia.</p>  
+
+    </p> Following the line of its namesakes, Casa Carmen presents a menu that combines traditional Mediterranean recipes with fusion dishes in a contemporary and cozy space..</p> 
+
+                     <!--insertar el texto-->
+    <hr>
+  </div>
+	<div class="container">
+    <div class="main-img">
+      <img src="CasaCarmen1.jpg" id="current">
+    </div>
+
+    <div class="imgs">                                          <!--insertar las fotos-->
+      <img src="CasaCarmen1.jpg">
+      <img src="CasaCarmen2.jpg">
+      <img src="CasaCarmen3.jpg">
+      <img src="CasaCarmen4.jpg">
+    </div>
+  </div>
+  <hr>
+  
+  <section class="container">
+
+<div class ="one" style="float: left ; width:50%;
+    padding: 10px; background-color: #F5F1E9">
+<p><i class="fa fa-map-o" style="margin-left: 20px;font-size:20px;color:#EA5933;"></i>   <!--insertar la info relevante a los iconos-->
+<span style="margin: 16px"><b>Location:</b> Eixample - city center</p></span>
+<p><i class="fa fa-cutlery" style="margin-left: 20px;font-size:20px;color:#EA5933;"></i> 
+<span style="margin: 20px"><b>Dining room capacities:</b> 80 & 150 pax</p></span>
+<p><i class="fa fa-eur" style="margin-left: 20px;font-size:20px;color:#EA5933;"></i> 
+<span style="margin: 24px"><b>Price Level:</b> medium</p></span>
+</div> 
+
+<div class ="two" style="float: right; align: right; width:45%;
+    padding: 10px; background-color: #F5F1E9">
+<p><i class="fa fa-handshake-o" style="font-size:20px;color:#EA5933;"></i> 
+<span style="margin: 20px"><b>Style:</b> Mediterranean cuisine</span>
+<p><i class="fa fa-apple" style="font-size:20px;color:#EA5933;"></i> 
+<span style="margin: 25px"><b>Special diets:</b> Available</p></span>
+<p><i class="fa fa-wheelchair" style="font-size:20px;color:#EA5933;"></i>   
+<span style="margin: 25px"><b>Handicapped facilities:</b> Yes</p></span>
+</div>
+</section>
+</div> 
+  <script>
+    const current = document.querySelector('#current');
+const imgs = document.querySelector('.imgs');
+const img = document.querySelectorAll('.imgs img');
+const opacity = 0.6;
+
+// Set first img opacity
+img[0].style.opacity = opacity;
+
+imgs.addEventListener('click', imgClick);
+
+function imgClick(e) {
+  // Reset the opacity
+  img.forEach(img => (img.style.opacity = 1));
+
+  // Change current image to src of clicked image
+  current.src = e.target.src;
+
+  // Add fade in class
+  current.classList.add('fade-in');
+
+  // Remove fade-in class after .5 seconds
+  setTimeout(() => current.classList.remove('fade-in'), 500);
+
+  // Change the opacity to opacity var
+  e.target.style.opacity = opacity;
+}
+
+  </script>
+</body>
+</html>
